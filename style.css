@@ -1,0 +1,181 @@
+:root {
+  --clr-primary-nutmeg: hsl(14, 45%, 36%);
+  --clr-primary-raspberry: hsl(332, 51%, 32%);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-rose-white: hsl(330, 100%, 98%);
+  --clr-eggshell: hsl(30, 54%, 90%);
+  --clr-light-grey: hsl(30, 18%, 87%);
+  --clr-wenge-brown: hsl(30, 10%, 34%);
+  --clr-dark-charcoal: hsl(24, 5%, 18%);
+
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-extra-bold: 700;
+
+  --ff-young-serif: "Young Serif", serif;
+  --ff-outfit: "Outfit", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--ff-outfit);
+  font-weight: var(--fw-regular);
+  font-size: 16px;
+  color: var(--clr-wenge-brown);
+  background-color: var(--clr-eggshell);
+  line-height: 1.8;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 2rem;
+  margin-block: 6rem;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.box {
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: var(--clr-white);
+}
+
+.img-top {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.intro-text h1 {
+  color: var(--clr-dark-charcoal);
+  font-family: var(--ff-young-serif);
+  text-decoration: none;
+  padding: 20px 0;
+  display: inline-block;
+  font-weight: var(--fw-regular);
+  font-size: 2.2rem;
+}
+.intro-text p {
+  margin-bottom: 2rem;
+}
+.preparation-time-box {
+  padding: 1.5rem 3rem;
+  border-radius: 16px;
+  background-color: var(--clr-rose-white);
+  margin-bottom: 2rem;
+}
+.preparation-time-box h3 {
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-raspberry);
+  margin: -6px 0px 6px -18px;
+}
+.preparation-time-box ul li::marker {
+  color: var(--clr-primary-raspberry);
+  font-weight: var(--fw-bold);
+}
+
+:is(.preparation-time-box, .ingredients-box, .instructions-box) li {
+  padding-left: 1rem;
+}
+.ingredients-box {
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+.ingredients-box h2 {
+  text-decoration: none;
+  font-family: var(--ff-young-serif);
+  font-weight: var(--fw-regular);
+  color: var(--clr-primary-nutmeg);
+  margin: -6px 0px 6px -16px;
+  /* font-size: 2rem; */
+}
+hr {
+  color: var(--clr-light-grey);
+  opacity: 0.5;
+}
+.instructions-box {
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+.instructions-box h2 {
+  text-decoration: none;
+  font-family: var(--ff-young-serif);
+  font-weight: var(--fw-regular);
+  color: var(--clr-primary-nutmeg);
+  margin: -6px 0px 6px -16px;
+}
+.nutrition-box .nutrition-box-header {
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+.nutrition-box h2 {
+  text-decoration: none;
+  font-family: var(--ff-young-serif);
+  font-weight: var(--fw-regular);
+  color: var(--clr-primary-nutmeg);
+  margin: -6px 0px 6px -16px;
+}
+.nutrition-box p {
+  margin: -4px 0px 16px -16px;
+}
+.nutrition-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+.nutrition-box .nutrition-flex table tr:not(:last-child) {
+  padding-bottom: 5rem;
+  border-bottom: 0.8px solid rgb(180, 179, 179);
+}
+table tbody tr td {
+  padding: 1rem 0 1rem 3rem;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 4rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 425px) {
+  body {
+    padding-inline: 0;
+    margin-block: 0;
+  }
+
+  .box {
+    position: relative;
+    padding-top: 12rem;
+    border-radius: 0;
+  }
+  .img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+  }
+}
