@@ -33,7 +33,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-inline: 2rem;
-  margin-block: 6rem;
+  margin-block: 8rem;
 }
 img,
 svg {
@@ -82,6 +82,14 @@ svg {
 }
 .preparation-time-box ul li::marker {
   color: var(--clr-primary-raspberry);
+  font-weight: var(--fw-bold);
+}
+.ingredients-box ul li::marker {
+  color: var(--clr-primary-nutmeg);
+  font-weight: var(--fw-bold);
+}
+.instructions-box ol li::marker {
+  color: var(--clr-primary-nutmeg);
   font-weight: var(--fw-bold);
 }
 
@@ -147,6 +155,11 @@ table {
 }
 table tbody tr td {
   padding: 1rem 0 1rem 3rem;
+}
+
+table tbody tr td:nth-child(2) {
+  color: var(--clr-primary-nutmeg);
+  font-weight: var(--fw-extra-bold);
 }
 
 .attribution {
